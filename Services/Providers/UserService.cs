@@ -4,7 +4,6 @@ using BasicAuth.Model.UserDto;
 using BasicAuth.Models;
 using BasicAuth.Services.Interfaces;
 using BasicAuth.Storage.Repository.UserRepository.Interfaces;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace BasicAuth.Services.Providers;
 
