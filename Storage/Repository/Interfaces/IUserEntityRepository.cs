@@ -1,6 +1,6 @@
 using BasicAuth.Entities;
 
-namespace BasicAuth.Storage.Repository.UserRepository.Interfaces;
+namespace BasicAuth.Storage.Repository.Interfaces;
 
 public interface IUserEntityRepository
 {

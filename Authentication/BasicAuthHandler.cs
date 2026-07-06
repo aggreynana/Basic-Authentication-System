@@ -2,7 +2,7 @@ using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
-using BasicAuth.Storage.Repository.UserRepository.Interfaces;
+using BasicAuth.Storage.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Options;
 
@@ -81,6 +81,7 @@ public class BasicAuthHandler : AuthenticationHandler<AuthenticationSchemeOption
 
                 new Claim("FirstName", user.FirstName),
                 new Claim("LastName", user.LastName),
+                new Claim(ClaimTypes.Thumbprint, parsedAuthValue.Parameter ?? string.Empty),
                 new Claim(ClaimTypes.NameIdentifier, user.Id)
             };
 

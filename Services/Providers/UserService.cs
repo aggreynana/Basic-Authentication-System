@@ -3,7 +3,7 @@ using BasicAuth.Entities;
 using BasicAuth.Model.UserDto;
 using BasicAuth.Models;
 using BasicAuth.Services.Interfaces;
-using BasicAuth.Storage.Repository.UserRepository.Interfaces;
+using BasicAuth.Storage.Repository.Interfaces;
 
 namespace BasicAuth.Services.Providers;
 

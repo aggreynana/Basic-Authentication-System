@@ -1,8 +1,8 @@
 using BasicAuth.Context;
 using BasicAuth.Entities;
-using BasicAuth.Storage.Repository.UserRepository.Interfaces;
+using BasicAuth.Storage.Repository.Interfaces;
 
-namespace BasicAuth.Storage.Repository.UserRepository.Providers;
+namespace BasicAuth.Storage.Repository.Providers;
 
 public class UserEntityRepository : IUserEntityRepository
 {

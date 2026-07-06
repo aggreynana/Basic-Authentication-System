@@ -1,8 +1,9 @@
 using BasicAuth.Context;
+using BasicAuth.Extensions;
 using BasicAuth.Services.Interfaces;
 using BasicAuth.Services.Providers;
-using BasicAuth.Storage.Repository.UserRepository.Interfaces;
-using BasicAuth.Storage.Repository.UserRepository.Providers;
+using BasicAuth.Storage.Repository.Interfaces;
+using BasicAuth.Storage.Repository.Providers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 
 // Registering the services and repositories to the container.
-builder.Services.AddScoped<IUserEntityRepository, UserEntityRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddApiRepositories();
+builder.Services.AddApiServices();
+builder.Services.AddBasicAuth();
 
 
 // Registering the Postgresql
@@ -32,9 +34,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
