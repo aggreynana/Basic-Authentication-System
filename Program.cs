@@ -12,8 +12,9 @@ var config = builder.Configuration;
 
 // Registering the services and repositories to the container.
 builder.Services.AddApiRepositories();
+builder.Services.AddApiOptions(config);
 builder.Services.AddApiServices();
-builder.Services.AddBasicAuth();
+// builder.Services.AddBasicAuth();
 
 
 // Registering the Postgresql

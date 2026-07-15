@@ -42,3 +42,11 @@
 /home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/obj/Debug/net7.0/BasicAuth.pdb
 /home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/obj/Debug/net7.0/BasicAuth.genruntimeconfig.cache
 /home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/obj/Debug/net7.0/ref/BasicAuth.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

@@ -11,10 +11,12 @@ public class UserService : IUserService
 {
 
     private readonly IUserEntityRepository _userRepository;
+    private readonly ITokenService _tokenService;
 
-    public UserService(IUserEntityRepository userRepository)
+    public UserService(IUserEntityRepository userRepository, ITokenService tokenService)
     {
         _userRepository = userRepository;
+        _tokenService = tokenService;
     }
     public async Task<ApiResponse<AuthResponseDto>> CreateUserAsync(CreateUserRequestDto userDto)
     {
@@ -32,16 +34,12 @@ public class UserService : IUserService
         }
 
 
-        var basicAuth = $"{user.Id}:Password";
-
-        var encodeAuth = Encoding.UTF8.GetBytes(basicAuth);
-
-        var base64String = Convert.ToBase64String(encodeAuth);
+        var token = await _tokenService.GenerateToken(user);
 
 
         var response = new AuthResponseDto()
         {
-            Base64EncodedString = base64String
+            Token = token
         };
 
         return ApiResponse<AuthResponseDto>.OkResponse("User created", response);

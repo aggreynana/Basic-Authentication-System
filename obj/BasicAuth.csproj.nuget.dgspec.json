@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/BasicAuth.csproj": {}
+    "/home/aggrey/WorkSpace/Personal/BackEnd/API/BearerAuth(Jwt)/BasicAuth.csproj": {}
   },
   "projects": {
-    "/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/BasicAuth.csproj": {
+    "/home/aggrey/WorkSpace/Personal/BackEnd/API/BearerAuth(Jwt)/BasicAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/BasicAuth.csproj",
+        "projectUniqueName": "/home/aggrey/WorkSpace/Personal/BackEnd/API/BearerAuth(Jwt)/BasicAuth.csproj",
         "projectName": "BasicAuth",
-        "projectPath": "/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/BasicAuth.csproj",
+        "projectPath": "/home/aggrey/WorkSpace/Personal/BackEnd/API/BearerAuth(Jwt)/BasicAuth.csproj",
         "packagesPath": "/home/aggrey/.nuget/packages/",
-        "outputPath": "/home/aggrey/WorkSpace/Personal/BackEnd/API/BasicAuth/obj/",
+        "outputPath": "/home/aggrey/WorkSpace/Personal/BackEnd/API/BearerAuth(Jwt)/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/aggrey/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.0, )"

@@ -1,4 +1,5 @@
 using BasicAuth.Authentication;
+using BasicAuth.Model;
 using BasicAuth.Services.Interfaces;
 using BasicAuth.Services.Providers;
 using BasicAuth.Storage.Repository.Interfaces;
@@ -20,6 +21,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<ITokenService, TokenService>();
         return services;
     }
 
@@ -29,5 +31,9 @@ public static class ServiceCollectionExtensions
         return services;
     }
 
-
+    public static IServiceCollection AddApiOptions(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.Configure<JwtSettings>(configuration.GetSection(nameof(JwtSettings)));
+        return services;
+    }
 }
