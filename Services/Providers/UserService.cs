@@ -33,7 +33,6 @@ public class UserService : IUserService
             return ApiResponse<AuthResponseDto>.FailedDependency();
         }
 
-
         var token = await _tokenService.GenerateToken(user);
 
 
@@ -44,6 +43,4 @@ public class UserService : IUserService
 
         return ApiResponse<AuthResponseDto>.OkResponse("User created", response);
     }
-
-
 }
