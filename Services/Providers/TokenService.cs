@@ -21,10 +21,11 @@ public class TokenService : ITokenService
     public async Task<string> GenerateToken(UserEntity user)
     {
         await Task.Delay(0);
+        
         // prepare user claims
         var claims = new Claim[]
         {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
+            new(ClaimTypes.NameIdentifier, user.Id),
             new("FirstName", user.FirstName),
             new("LastName", user.LastName),
             new(ClaimTypes.Name, $"{user.FirstName} {user.LastName}")

@@ -14,6 +14,7 @@ var config = builder.Configuration;
 builder.Services.AddApiRepositories();
 builder.Services.AddApiOptions(config);
 builder.Services.AddApiServices();
+builder.Services.AddBearerAuth(config);
 // builder.Services.AddBasicAuth();
 
 

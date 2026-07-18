@@ -1,6 +1,7 @@
 using BasicAuth.Extensions;
 using BasicAuth.Model.ProductDto;
 using BasicAuth.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,7 +9,7 @@ namespace BasicAuth.Controllers;
 
 [ApiController]
 [Route("api/products")]
-[Authorize(AuthenticationSchemes = "Basic")]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 public class ProductController : ControllerBase
 {
 
