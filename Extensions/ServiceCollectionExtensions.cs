@@ -64,6 +64,8 @@ public static class ServiceCollectionExtensions
         return services;
 
     }
+
+
     public static IServiceCollection AddApiOptions(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<JwtSettings>(configuration.GetSection(nameof(JwtSettings)));
